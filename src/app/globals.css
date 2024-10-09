@@ -53,3 +53,23 @@
 .card-mf {
   top: 70px;
 }
+
+.glass {
+  background-color: #ffffff51;
+  border: 1px solid #0000000c;
+}
+
+.borda::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fe6103;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.borda:hover::after {
+  width: 100%;
+}

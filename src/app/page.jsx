@@ -1,12 +1,7 @@
 "use client";
-import Image from 'next/image'
-import { useRef } from 'react';
+import Image from 'next/image';
+import React from 'react';
 
-
-export function MyComponent() {
-  const circleLogo = useRef(null);
-
-};
 
 
 export default function Home() {
@@ -37,7 +32,6 @@ export default function Home() {
               autoPlay
               loop
               muted
-              unoptimized
               width="100%"
               height="auto"
               className='md:block hidden'
@@ -62,7 +56,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="s-services" className="md:flex-row flex-col min-h-screen flex justify-between items-center px-16">
+      <section id="s-services" className="md:flex-row flex-col min-h-screen flex justify-between items-center px-16 mt-10">
         <div className='md:flex md:justify-between justify-center items-center'>
           <div id="products" className=" h-full">
             <div id="products-titlle md:block flex">
@@ -106,7 +100,80 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <section className='h-96 bg-orange-500 flex flex-row px-32 items-center justify-between'>
+        <div className='text-white w-1/4 flex flex-col py-16'>
+          <h1 className='text-3xl'>Melhore a gestão de licitações no seu orgão público</h1>
+          <p className='my-5'>Automatize o planejamento de licitações e facilite as compras públicas com nossos sistemas</p>
+          <div>
+            <a href="" className='w-44 px-3 py-2 flex flex-row items-center gradient-button rounded-lg '>
+              Ver soluções
+              <Image
+                src={'/seta direita.svg'}
+                width={20}
+                height={10}
+                alt='->' className='ml-3' />
+            </a>
+          </div>
+        </div>
+        <div className='w-80 h-80 rounded-lg shadow-xl glass px-5 py-5 text-white flex flex-col justify-between'>
+          <h2 className='text-xl font-bold'>Plano de Contratações Anual automático</h2>
+          <p className='text-sm '>Gere seu Plano de Contratações Anual com apenas 1 clique! Nosso sistema
+            automatiza a criação do Plano Anual a partir da criação dos DFDs, trazendo celeridade e organização
+            para seu orgão público
+          </p>
+          <button className='flex flex-row items-center borda relative w-32'>Demonstração
+            <Image
+              src={'/seta direita.svg'}
+              width={20}
+              height={10}
+              alt='->' className='' /></button>
+        </div>
+        <div className='w-80 h-80 rounded-lg shadow-xl glass px-5 py-5 text-white flex flex-col justify-between'>
+          <h2 className='text-xl font-bold'>Orçamentos direto de fornecedores</h2>
+          <p className='text-sm '> A lei não extingue a possibilidade de conseguir
+            cotações com fornecedores, desde que seja apresentada justificativa da
+            escolha desses fornecedores e que não tenham sido obtidos os orçamentos
+            com mais de 6 (seis) meses de antecedência da data de divulgação do edital
+          </p>
+          <button className='flex flex-row items-center borda relative w-32'>Demonstração
+            <Image
+              src={'/seta direita.svg'}
+              width={20}
+              height={10}
+              alt='->' className='' /></button>
+        </div>
+      </section >
+      <section className='px-16 mt-32'>
+        <div className='flex flex-row justify-between'>
+          <div>
+            <h3 className='font-medium'>Eficiência</h3>
+            <h1 className='font-bold text-5xl pr-10 mt-5'>A solução para pesquisa de preços em compras públicas</h1>
+          </div>
+          <p className='w-2/3'>Automatize e compare preços de forma eficiente, garantindo transparência e economia nas aquisições do setor público. Com o
+            Média Fácil você recebe orçamentos direto de fornecedores em até 15 dias úteis! Além de orçamentos com PNCP e BPS.
+          </p>
+        </div>
+        <div className='grid grid-cols-3 justify-between items-center gap-24 mt-32'>
+          <div className='grid grid-rows-3 h-48'>
+            <span>1</span>
+            <h3 className='font-bold'>Integração de setores</h3>
+            <p>Coordenção entre diferentes departamentos ou setores, com o objetivo de otimizar processos, melhorar a comunicação e alinhar esforços
+              para alcançar objetivos comuns.</p>
+          </div>
+          <div className='grid grid-rows-3 h-48'>
+            <span>2</span>
+            <h3 className='font-bold'>Documentos padronizados</h3>
+            <p>Nosso sistema oferece documentos padronizados com opções de personalização, proporcionando um processo mais confiável, ágil e organizado</p>
+          </div>
+          <div className='grid grid-rows-3 h-48'>
+            <span>3</span>
+            <h3 className='font-bold'>Integração de setores</h3>
+            <p>Coordenção entre diferentes departamentos ou setores, com o objetivo de otimizar processos, melhorar a comunicação e alinhar esforços
+              para alcançar objetivos comuns.</p>
+          </div>
+        </div>
+        <button className='my-20 gradient-button'>Saiba mais</button>
+      </section>
     </>
-  )
+  );
 }
