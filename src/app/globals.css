@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 .gradient-button {
-  padding: 10px 20px;
+  padding: 12px 16px;
   background: linear-gradient(135deg, #f97316, #fb923c);
   color: white;
   border: none;
@@ -11,13 +13,12 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gradient-button:hover {
   background: linear-gradient(135deg, #fb923c, #f97316);
-  transform: translateY(-3px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -27,6 +28,35 @@
 }
 
 .gradient-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.gradient-button2 {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-button2:hover {
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gradient-button2:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5);
+}
+
+.gradient-button2:active {
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -72,4 +102,21 @@
 
 .borda:hover::after {
   width: 100%;
+}
+
+.footer1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom {
+  transition: transform 0.3s ease-out;
+}
+
+.footer1:hover .zoom {
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
 }
