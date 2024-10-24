@@ -4,10 +4,10 @@ import React from "react";
 export default function Products() {
     return (
         <>
-            <section id="produtos" className='md:px-16 md:my-32 px-5 mt-5 '>
+            <section id="produtos" className='md:px-16 md:py-32 py-20 px-5'>
                 <div className='grid md:grid-rows-1 grid-rows-2 md:mb-40 mb-20'>
                     <div>
-                        <h3 className='font-medium text-primary'>Planejamento</h3>
+                        <h3 className='font-medium text-primary flex flex-row'><Image src={'/sublogo-pg.png'} width={20} height={20} alt="preparagov" /> <span className="ml-1">Planejamento</span></h3>
                         <h1 className='font-bold md:text-5xl text-4xl pr-10 mt-5'>Planejamento eficiente</h1>
                     </div>
                     <p>O PreparaGov é um sistema que automatiza a fase preparatória de uma licitação,
@@ -40,13 +40,13 @@ export default function Products() {
                         </p>
                     </div>
                 </div>
-                <button className='gradient-button my-10'>Saiba mais</button>
+                <button className='gradient-button mt-10'>Saiba mais</button>
             </section>
 
-            <section className='md:px-16 md:my-32 px-5 mt-5'>
+            <section className='md:px-16 md:py-32 py-20 px-5 bg-zinc-50'>
                 <div className='grid md:grid-rows-1 grid-rows-2 md:mb-40 mb-20'>
                     <div>
-                        <h3 className='font-medium text-primary'>Eficiência</h3>
+                        <h3 className='font-medium text-primary flex flex-row '><Image src={'/sublogo-mf.png'} width={18} height={20} alt="media-facil"/><span className="ml-1">Eficiência</span></h3>
                         <h1 className='font-bold md:text-5xl text-3xl my-5'>A solução para pesquisa de preços em compras públicas</h1>
                     </div>
                     <p>Automatize e compare preços de forma eficiente, garantindo transparência e economia nas aquisições do setor público. Com o

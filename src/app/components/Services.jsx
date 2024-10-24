@@ -28,7 +28,7 @@ export default function Services() {
     };
 
     return (
-        <section id="s-services" className="md:flex-row flex-col min-h-screen flex justify-between items-center px-16 mt-10">
+        <section id="s-services" className="bg-zinc-50 md:flex-row flex-col min-h-screen flex justify-between items-center px-16 py-10">
             <div className="md:flex md:justify-between justify-center items-center w-full md:w-1/2">
                 <div id="products" className="w-full h-full">
                     <div id="products-title" className="md:block flex flex-col items-center text-center">
@@ -57,24 +57,21 @@ export default function Services() {
             </div>
 
             <div id='carousel' className="md:block hidden relative w-full md:w-1/2 h-auto overflow-hidden shadow-xl">
-                {/* Botão Anterior */}
                 <button onClick={prevSlide} className=" absolute top-1/2 left-0 text-primary bg-zinc-100 hover:bg-zinc-200 ml-2 p-2 rounded-full transform -translate-y-1/2 z-10">❮</button>
 
-                {/* Slides */}
                 <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeIndex * 100}%)`, width: `${totalSlides * 100}%` }}>
                     {slides.map((slide, index) => (
                         <div key={index} className="flex-shrink-0 w-full h-[500px] shadow-xl rounded-lg relative bg-white overflow-hidden p-10 flex flex-col justify-between">
                             <div className="flex flex-col items-start">
-                                <Image src={slide.logo} width={100} height={80} alt={`Logo ${slide.title}`} className="top-52 absolute left-[500px]" />
-                                <h1 className="absolute font-bold text-5xl top-24 left-20 ">{slide.title}</h1>
-                                <p className="absolute top-40 w-80 left-20">{slide.description}</p>
+                                <Image src={slide.logo} width={80} height={80} alt={`Logo ${slide.title}`} className="top-10 absolute left-[80px]" />
+                                <h1 className="absolute font-bold text-5xl top-36 left-20 ">{slide.title}</h1>
+                                <p className="absolute top-52 w-[500px] left-20">{slide.description}</p>
                             </div>
                             <button className="gradient-button mt-10 absolute bottom-10 left-20">Demonstração</button>
                         </div>
                     ))}
                 </div>
 
-                {/* Botão Próximo */}
                 <button onClick={nextSlide} className=" absolute top-1/2 right-0 text-primary bg-zinc-100 hover:bg-zinc-200 mr-2 p-2 rounded-full transform -translate-y-1/2 z-10">❯</button>
             </div>
         </section>

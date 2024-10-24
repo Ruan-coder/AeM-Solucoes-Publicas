@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Info from './components/Info';
 import Products from './components/Products';
 import Footer from './components/Footer';
+import Zap from './components/Zap';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Info />
       <Products />
       <Footer />
+      <Zap/>
     </>
   );
 }

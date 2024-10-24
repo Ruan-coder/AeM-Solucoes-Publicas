@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <>
-            <section className="footer1 overflow-hidden relative mt-10">
+            <section className="footer1 overflow-hidden relative">
                 <div className="absolute inset-0 z-10 transition-transform duration-500 ease-in-out zoom">
                     <Image
                         src={'/team-work.jpg'}
@@ -40,8 +40,8 @@ export default function Footer() {
                             <p>(33) 3753-2822</p>
                         </div>
                         <div className="flex flex-row gap-3 my-10">
-                            <a href=""><Image src={'/youtube.png'} width={50} height={30} alt="youtube" /></a>
-                            <a href="" className="flex items-center"><Image src={'/instagram.png'} width={30} height={30} alt="instagram" /></a>
+                            <a href="https://www.youtube.com/@TVAMSolucoesPublicas"><Image src={'/youtube.png'} width={50} height={30} alt="youtube" /></a>
+                            <a href="https://www.instagram.com/aemsolucoespublicas/" className="flex items-center"><Image src={'/instagram.png'} width={30} height={30} alt="instagram" /></a>
                         </div>
                     </div>
                     <div className="md:block hidden">
@@ -57,8 +57,8 @@ export default function Footer() {
                     <div >&copy; <a href="https://www.linkedin.com/in/ruancostaarag%C3%A3obb60581a1/" target="blank">2024 Ruan Costa Aragão</a></div>
                     <div className="md:block hidden">
                         <a href="">Politica de privacidade</a>
-                        <a href="" className="mx-5">Termos de serviço</a>
-                        <a href="">Configuração de cookies</a>
+                        <a href="" className="mx-5">Termos de serviços</a>
+                        {/* <a href="">Configuração de cookies</a> */}
                     </div>
                 </div>
             </section>
